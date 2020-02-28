@@ -9,6 +9,7 @@ FORCE:
 cmd/%: FORCE
 	@echo "$@"
 	@go build -o "./bin/$$(basename $@)" "./$@"
+	@cp bin/$$(basename $@) $$HOME/go/bin/
 
 test:
 	@echo "$@"
